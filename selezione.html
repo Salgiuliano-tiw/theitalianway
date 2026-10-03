@@ -51,7 +51,12 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-b
 /* SELEZIONE */
 .section { padding: 32px 0 56px; }
 .brand-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); }
-.brand-card { background: var(--white); padding: 32px 28px; display: flex; flex-direction: column; gap: 8px; }
+.brand-card { background: var(--white); padding: 32px 28px; display: flex; flex-direction: column; gap: 8px; overflow: hidden; }
+.brand-img { display: block; width: calc(100% + 56px); max-width: none; margin: -32px -28px 12px; aspect-ratio: 4/3; object-fit: cover; }
+.brand-more { background: var(--ink); color: var(--white); justify-content: center; align-items: flex-start; gap: 14px; }
+.brand-more .brand-name { color: var(--white); }
+.brand-more .brand-text { color: rgba(255,255,255,0.7); margin: 0; }
+.brand-more .brand-cta { color: var(--white); margin-top: 6px; }
 .brand-cat { font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); }
 .brand-name { font-size: 24px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.15; }
 .brand-origin { font-size: 14px; color: var(--muted); }
@@ -94,6 +99,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
     <div class="brand-grid">
 
       <div class="brand-card">
+        <img class="brand-img" src="img/sel-nero-giardini.jpg" alt="Scarpe in pelle marrone su un banco da lavoro (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Calzature</span>
         <h2 class="brand-name">Nero Giardini</h2>
         <span class="brand-origin">Monte San Pietrangeli (Fermo), Marche</span>
@@ -102,6 +108,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
       </div>
 
       <div class="brand-card">
+        <img class="brand-img" src="img/sel-paoul.jpg" alt="Scarpe da ballo su un parquet con luci calde (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Scarpe da ballo e cerimonia</span>
         <h2 class="brand-name">PAOUL</h2>
         <span class="brand-origin">Saonara (Padova), Veneto</span>
@@ -110,6 +117,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
       </div>
 
       <div class="brand-card">
+        <img class="brand-img" src="img/sel-dalle-piane.jpg" alt="Maglioni in cashmere piegati su una mensola di legno (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Maglieria in cashmere</span>
         <h2 class="brand-name">Dalle Piane Cashmere</h2>
         <span class="brand-origin">Prato, Toscana</span>
@@ -118,6 +126,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
       </div>
 
       <div class="brand-card">
+        <img class="brand-img" src="img/sel-duemme.jpg" alt="Sciarpa e maglia in cashmere verde chiaro (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Maglieria in cashmere</span>
         <h2 class="brand-name">Duemme Maglieria Cashmere</h2>
         <span class="brand-origin">Toscana</span>
@@ -126,6 +135,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
       </div>
 
       <div class="brand-card">
+        <img class="brand-img" src="img/sel-cressi.jpg" alt="Scarpette da mare su una spiaggia di ciottoli (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Mare e sport acquatici</span>
         <h2 class="brand-name">Cressi</h2>
         <span class="brand-origin">Genova, Liguria</span>
@@ -133,8 +143,15 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.it/dp/B0866RW4SB?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vedi il prodotto su Amazon.it</a>
       </div>
 
+      <div class="brand-card brand-more">
+        <span class="brand-cat">Libri</span>
+        <h2 class="brand-name">Cerchi anche un libro?</h2>
+        <p class="brand-text">Le storie di Sal Giuliano, libri illustrati per bambini e narrativa, si trovano sul sito dell'autore.</p>
+        <a class="brand-cta" href="https://salgiuliano.com" target="_blank" rel="noopener">Vai a salgiuliano.com</a>
+      </div>
+
     </div>
-    <p class="note">I prezzi e la disponibilità sono quelli indicati su Amazon.it al momento dell'acquisto. Cliccando sui link vai sul sito di Amazon: il prodotto lo acquisti e lo ricevi da loro o dal venditore indicato nella pagina.</p>
+    <p class="note">Le immagini sono illustrative, create per dare l'atmosfera: non rappresentano i prodotti in vendita. I prezzi e la disponibilità sono quelli indicati su Amazon.it al momento dell'acquisto. Cliccando sui link vai sul sito di Amazon: il prodotto lo acquisti e lo ricevi da loro o dal venditore indicato nella pagina.</p>
   </div>
 </section>
 

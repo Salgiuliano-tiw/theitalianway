@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Italian Way — Storie di Sal Giuliano</title>
-<meta name="description" content="Libri illustrati per bambini e narrativa per adulti dalla Sicilia: le storie di Sal Giuliano, tra l'Etna e Catania. Scopri Brontolo the Etna Dragon e le prossime uscite.">
+<title>The Italian Way — Selezione Made in Italy</title>
+<meta name="description" content="Pochi marchi italiani scelti uno per uno: calzature, maglieria in cashmere e articoli per il mare. Aziende italiane con sede in Italia, link ai negozi ufficiali su Amazon.it.">
 <link rel="canonical" href="https://theitalianway.it.com/">
 <link rel="alternate" hreflang="it" href="https://theitalianway.it.com/">
 <link rel="alternate" hreflang="en" href="https://theitalianway.it.com/index-en.html">
 <link rel="alternate" hreflang="x-default" href="https://theitalianway.it.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Italian Way">
-<meta property="og:title" content="The Italian Way — Storie di Sal Giuliano">
-<meta property="og:description" content="Libri illustrati per bambini e narrativa per adulti dalla Sicilia: le storie di Sal Giuliano, tra l'Etna e Catania. Scopri Brontolo the Etna Dragon e le prossime uscite.">
+<meta property="og:title" content="The Italian Way — Selezione Made in Italy">
+<meta property="og:description" content="Pochi marchi italiani scelti uno per uno: calzature, maglieria in cashmere e articoli per il mare.">
 <meta property="og:url" content="https://theitalianway.it.com/">
 <meta property="og:image" content="https://theitalianway.it.com/img/hero-etna.jpg">
 <meta property="og:locale" content="it_IT">
@@ -49,12 +49,12 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-b
 .lang-switch button { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; background: none; border: none; color: var(--muted); padding: 4px 6px; cursor: pointer; }
 .lang-switch button.active { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 
-/* HERO — full bleed photographic */
+/* HERO */
 .hero { position: relative; }
 .hero-media { width: 100%; aspect-ratio: 16/8; object-fit: cover; display: block; background: #ECECEC; }
 .hero-caption { max-width: 1360px; margin: 0 auto; padding: 28px 24px 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
 .hero-caption h1 { font-size: clamp(30px, 4.4vw, 52px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.02; max-width: 16ch; }
-.hero-caption p { font-size: 16px; color: var(--ink-soft); max-width: 40ch; margin-top: 10px; }
+.hero-caption p { font-size: 16px; color: var(--ink-soft); max-width: 44ch; margin-top: 10px; line-height: 1.6; }
 .btn {
   display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700;
   padding: 14px 28px; border-radius: 2px; white-space: nowrap;
@@ -66,58 +66,52 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-b
 
 /* SECTION */
 .section { padding: 56px 0; }
-.section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; gap: 16px; flex-wrap: wrap; }
+.section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px; gap: 16px; flex-wrap: wrap; }
 .section-head h2 { font-size: clamp(22px, 2.8vw, 30px); font-weight: 800; letter-spacing: -0.02em; }
 .section-head .see-all { font-size: 14px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.section-sub { font-size: 15px; line-height: 1.6; color: var(--ink-soft); max-width: 62ch; margin-bottom: 8px; }
+.disclosure { font-size: 13.5px; color: var(--muted); margin-bottom: 28px; }
 
-/* PAGE HEADER interne */
-.page-header { padding: 40px 0 8px; }
-.page-header h1 { font-size: clamp(28px, 3.6vw, 42px); font-weight: 900; letter-spacing: -0.03em; }
-
-/* FILTER PILLS */
-.filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 20px 0 36px; }
-.filter-btn {
-  font-family: 'Inter', sans-serif; font-size: 13.5px; font-weight: 700; color: var(--ink);
-  background: var(--white); border: 1.5px solid var(--ink); padding: 9px 20px; border-radius: 2px; cursor: pointer;
-}
-.filter-btn.active { background: var(--accent); border-color: var(--accent); color: var(--white); }
-
-/* PRODUCT GRID — Zalando style, edge-to-edge photo, no card chrome */
-.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--line); }
+/* GRIGLIA MARCHI */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); }
 .tile { background: var(--white); display: flex; flex-direction: column; position: relative; }
-.tile-media-wrap { position: relative; overflow: hidden; }
-.tile-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; background: #ECECEC; transition: transform 0.5s ease; }
+.tile-media-wrap { position: relative; overflow: hidden; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
+.tile-media-wrap.ph-1 { background: linear-gradient(135deg, #3a2a1f, #8a5a3a); }
+.tile-media-wrap.ph-2 { background: linear-gradient(135deg, #5a1f2e, #b04a5e); }
+.tile-media-wrap.ph-3 { background: linear-gradient(135deg, #cdbfae, #efe6d8); }
+.tile-media-wrap.ph-4 { background: linear-gradient(135deg, #2f3d36, #6f8a7c); }
+.tile-media-wrap.ph-5 { background: linear-gradient(135deg, #12496b, #3aa0c9); }
+.ph-name { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; color: rgba(255,255,255,0.9); text-align: center; padding: 0 20px; }
+.ph-3 .ph-name { color: rgba(20,21,26,0.8); }
+.tile-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
 .tile:hover .tile-img { transform: scale(1.035); }
 .tile-badge {
-  position: absolute; top: 12px; left: 12px; background: var(--accent); color: var(--white);
+  position: absolute; top: 12px; left: 12px; z-index: 2; background: var(--accent); color: var(--white);
   font-size: 11px; font-weight: 800; letter-spacing: 0.02em; padding: 5px 10px; border-radius: 2px; text-transform: uppercase;
 }
-.tile-badge.muted { background: var(--ink); }
-.tile-badge.soon { background: var(--white); color: var(--ink); border: 1px solid var(--ink); }
-.tile-info { padding: 14px 4px 4px; }
-.tile-title { font-size: 14.5px; font-weight: 700; color: var(--ink); line-height: 1.3; margin-bottom: 4px; }
-.tile-sub { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
-.tile-cta { font-size: 13.5px; font-weight: 700; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
-.tile-cta.disabled { color: var(--muted); text-decoration: none; }
+.tile-info { padding: 16px 16px 24px; display: flex; flex-direction: column; flex: 1; }
+.tile-title { font-size: 18px; font-weight: 800; color: var(--ink); line-height: 1.25; margin-bottom: 4px; letter-spacing: -0.01em; }
+.tile-sub { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.tile-text { font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); margin-bottom: 14px; }
+.tile-cta { font-size: 14px; font-weight: 700; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; margin-top: auto; }
 .tile-cta:hover { color: var(--accent); }
+.tile-more { background: var(--ink); color: var(--white); justify-content: center; align-items: flex-start; padding: 32px 28px; gap: 14px; }
+.tile-more h3 { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.2; }
+.tile-more p { font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.7); }
+.tile-more .btn { background: var(--white); color: var(--ink); }
+.tile-more .btn:hover { background: var(--accent); color: var(--white); }
+.grid-note { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 70ch; margin-top: 20px; }
 
-/* STRIP banner */
+/* STRIP */
 .strip { background: var(--ink); color: var(--white); padding: 64px 0; text-align: left; }
 .strip p { font-size: clamp(20px, 2.6vw, 28px); font-weight: 700; letter-spacing: -0.01em; max-width: 26ch; line-height: 1.4; }
 .strip span { display: block; font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.55); margin-top: 14px; }
 
-/* ABOUT */
-.about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 0; }
-.about-img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; background: #ECECEC; }
-.about-text { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
-.about-text h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 18px; }
-.about-text p { font-size: 16px; line-height: 1.7; color: var(--ink-soft); margin-bottom: 14px; }
-
-/* CONTACT */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 8px 0 40px; }
-.contact-block h3 { font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 8px; }
-.contact-block a { font-size: 19px; font-weight: 800; }
-.contact-block a:hover { color: var(--accent); }
+/* LIBRI (secondario) */
+.books { padding: 48px 0 8px; }
+.books-box { border: 1.5px solid var(--line); padding: 28px 32px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.books-box h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+.books-box p { font-size: 15px; color: var(--ink-soft); line-height: 1.6; max-width: 60ch; }
 
 /* FOOTER */
 footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40px; }
@@ -130,11 +124,8 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 .footer-bottom p { font-size: 12.5px; color: var(--muted); }
 
 @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 860px) {
-  .nav-links { display: none; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; }
-}
-
+@media (max-width: 860px) { .nav-links { display: none; } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -144,67 +135,124 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
     <ul class="nav-links" style="list-style:none;"><li><a href="index.html" class="active">Home</a></li><li><a href="vetrina.html">Catalogo</a></li><li><a href="selezione.html">Selezione</a></li><li><a href="chi-siamo.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li><div class="lang-switch"><button class="active" onclick="location.href='index.html'">IT</button><button class="" onclick="location.href='index-en.html'">EN</button></div></ul>
   </div>
 </nav>
+
 <section class="hero">
-  <img class="hero-media" src="img/hero-etna.jpg" alt="">
+  <img class="hero-media" src="img/hero-etna.jpg" alt="L'Etna al tramonto tra gli ulivi della Sicilia">
   <div class="hero-caption">
     <div>
-      <h1>Storie dalla Sicilia, per ogni età</h1>
-      <p>Libri illustrati per bambini e narrativa per adulti, ambientati tra l'Etna e Catania.</p>
+      <h1>Il meglio del Made in Italy, scelto per te</h1>
+      <p>Pochi marchi, scelti uno per uno: aziende italiane con sede in Italia, con il link diretto al loro negozio su Amazon.it.</p>
     </div>
-    <a href="vetrina.html" class="btn btn-primary">Vedi il catalogo</a>
+    <a href="#selezione" class="btn btn-primary">Scopri la selezione</a>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="selezione">
   <div class="wrap">
     <div class="section-head">
-      <h2>In evidenza</h2>
-      <a href="vetrina.html" class="see-all">Vedi tutto</a>
+      <h2>La nostra selezione</h2>
+      <a href="selezione.html" class="see-all">Vedi tutto</a>
     </div>
+    <p class="section-sub">Calzature, maglieria in cashmere e articoli per il mare. Cliccando vai sul negozio ufficiale del marchio su Amazon.it.</p>
+    <p class="disclosure">In qualità di Affiliato Amazon io ricevo un guadagno dagli acquisti idonei.</p>
+
     <div class="grid">
+
       <div class="tile">
-        <div class="tile-media-wrap">
-          <img class="tile-img" src="img/brontolo-cover.jpg" alt="Brontolo the Etna Dragon">
-          <span class="tile-badge">Disponibile</span>
-        </div>
+        <a class="tile-media-wrap ph-1" href="https://www.amazon.it/stores/NeroGiardini/page/E19BB864-04C8-4CF7-9DD2-370126213569?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="Nero Giardini su Amazon.it">
+          <span class="ph-name">Nero Giardini</span>
+          <img class="tile-img" src="img/sel-nero-giardini.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </a>
         <div class="tile-info">
-          <div class="tile-title">Brontolo the Etna Dragon</div>
-          <div class="tile-sub">Storybook illustrato · 3-7 anni</div>
-          <a href="https://www.amazon.com/dp/B0HHRZRNMP" class="tile-cta" target="_blank" rel="noopener">Acquista su Amazon</a>
+          <div class="tile-title">Nero Giardini</div>
+          <div class="tile-sub">Calzature · Monte San Pietrangeli (Fermo), Marche</div>
+          <p class="tile-text">Scarpe in pelle per donna, uomo e bambini.</p>
+          <a class="tile-cta" href="https://www.amazon.it/stores/NeroGiardini/page/E19BB864-04C8-4CF7-9DD2-370126213569?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vai al negozio su Amazon.it</a>
         </div>
       </div>
+
       <div class="tile">
-        <div class="tile-media-wrap">
-          <img class="tile-img" src="img/pino-cover.jpg" alt="Pino and the Great Map of Light">
-          <span class="tile-badge soon">In arrivo</span>
-        </div>
+        <a class="tile-media-wrap ph-2" href="https://www.amazon.it/stores/PAOUL/page/0567BABB-10ED-4AB4-939B-7CB25C14422B?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="PAOUL su Amazon.it">
+          <span class="ph-name">PAOUL</span>
+          <img class="tile-img" src="img/sel-paoul.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </a>
         <div class="tile-info">
-          <div class="tile-title">Pino and the Great Map of Light</div>
-          <div class="tile-sub">Libro da colorare</div>
-          <span class="tile-cta disabled">Presto disponibile</span>
+          <div class="tile-title">PAOUL</div>
+          <div class="tile-sub">Scarpe da ballo e cerimonia · Saonara (Padova), Veneto</div>
+          <p class="tile-text">Calzaturificio specializzato in scarpe da ballo e da cerimonia, per lei e per lui.</p>
+          <a class="tile-cta" href="https://www.amazon.it/stores/PAOUL/page/0567BABB-10ED-4AB4-939B-7CB25C14422B?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vai al negozio su Amazon.it</a>
         </div>
       </div>
+
       <div class="tile">
-        <div class="tile-media-wrap">
-          <img class="tile-img" src="img/patto-ognina-cover.jpg" alt="Il Patto di Ognina">
-          <span class="tile-badge muted">In lavorazione</span>
-        </div>
+        <a class="tile-media-wrap ph-3" href="https://www.amazon.it/stores/DALLEPIANECASHMERE/page/516DA45C-64C1-444A-AD76-246E452184C9?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="Dalle Piane Cashmere su Amazon.it">
+          <span class="ph-name">Dalle Piane Cashmere</span>
+          <img class="tile-img" src="img/sel-dalle-piane.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </a>
         <div class="tile-info">
-          <div class="tile-title">Il Patto di Ognina</div>
-          <div class="tile-sub">Thriller · Narrativa adulti</div>
-          <span class="tile-cta disabled">In lavorazione</span>
+          <div class="tile-title">Dalle Piane Cashmere</div>
+          <div class="tile-sub">Maglieria in cashmere · Prato, Toscana</div>
+          <p class="tile-text">Maglioni, cardigan e accessori in cashmere.</p>
+          <a class="tile-cta" href="https://www.amazon.it/stores/DALLEPIANECASHMERE/page/516DA45C-64C1-444A-AD76-246E452184C9?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vai al negozio su Amazon.it</a>
         </div>
       </div>
+
+      <div class="tile">
+        <a class="tile-media-wrap ph-4" href="https://www.amazon.it/stores/DuemmeMaglieriaCashmere/page/E74B0C2A-2267-45D8-ACAE-6811F1806AC4?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="Duemme Maglieria Cashmere su Amazon.it">
+          <span class="ph-name">Duemme Maglieria Cashmere</span>
+          <img class="tile-img" src="img/sel-duemme.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="tile-info">
+          <div class="tile-title">Duemme Maglieria Cashmere</div>
+          <div class="tile-sub">Maglieria in cashmere · Toscana</div>
+          <p class="tile-text">Maglieria, sciarpe e scaldacollo in cashmere.</p>
+          <a class="tile-cta" href="https://www.amazon.it/stores/DuemmeMaglieriaCashmere/page/E74B0C2A-2267-45D8-ACAE-6811F1806AC4?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vai al negozio su Amazon.it</a>
+        </div>
+      </div>
+
+      <div class="tile">
+        <a class="tile-media-wrap ph-5" href="https://www.amazon.it/dp/B0866RW4SB?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="Cressi Borocay su Amazon.it">
+          <span class="ph-name">Cressi</span>
+          <img class="tile-img" src="img/sel-cressi.jpg" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="tile-info">
+          <div class="tile-title">Cressi</div>
+          <div class="tile-sub">Mare e sport acquatici · Genova, Liguria</div>
+          <p class="tile-text">Le scarpette da mare Borocay, per spiaggia, barca e sport in acqua.</p>
+          <a class="tile-cta" href="https://www.amazon.it/dp/B0866RW4SB?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vedi il prodotto su Amazon.it</a>
+        </div>
+      </div>
+
+      <div class="tile tile-more">
+        <h3>Come scegliamo i marchi</h3>
+        <p>Solo aziende italiane con sede in Italia, verificate una per una. Niente cataloghi infiniti.</p>
+        <a class="btn" href="selezione.html">Leggi la selezione</a>
+      </div>
+
     </div>
+    <p class="grid-note">Le immagini sono illustrative, create per dare l'atmosfera: non rappresentano i prodotti in vendita. I prezzi e la disponibilità sono quelli indicati su Amazon.it al momento dell'acquisto. Cliccando sui link vai sul sito di Amazon: il prodotto lo acquisti e lo ricevi da loro o dal venditore indicato nella pagina.</p>
   </div>
 </section>
 
 <section class="strip">
   <div class="wrap">
-    <p>Ogni creazione nasce da un'idea e diventa un piccolo mondo da condividere.</p>
-    <span>Sal Giuliano</span>
+    <p>Pochi marchi, scelti con cura: il resto è rumore.</p>
+    <span>The Italian Way</span>
   </div>
 </section>
+
+<section class="books">
+  <div class="wrap">
+    <div class="books-box">
+      <div>
+        <h2>Cerchi anche un libro?</h2>
+        <p>Le storie di Sal Giuliano — libri illustrati per bambini e narrativa — si trovano sul sito dell'autore.</p>
+      </div>
+      <a href="https://salgiuliano.com" class="btn btn-outline" target="_blank" rel="noopener">Vai a salgiuliano.com</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="footer-row">
@@ -218,16 +266,6 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
     </div>
   </div>
 </footer>
-
-<script>
-function filterCatalog(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.tile').forEach(tile => {
-    tile.style.display = (cat === 'all' || tile.dataset.cat === cat) ? '' : 'none';
-  });
-}
-</script>
 
 </body>
 </html>
