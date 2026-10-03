@@ -125,7 +125,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 
 @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 860px) {
-  .nav-links { display: none; }
+  .nav-inner { flex-wrap: wrap; gap: 6px 16px; padding: 12px 24px; } .nav-links { width: 100%; gap: 22px; overflow-x: auto; white-space: nowrap; padding-bottom: 6px; scrollbar-width: none; } .nav-links::-webkit-scrollbar { display: none; }
   .hero-media { height: 260px; object-position: 78% center; }
   .hero-caption { position: static; padding: 24px 24px 0; gap: 18px; }
   .hero-caption h1 { max-width: 18ch; }
@@ -137,7 +137,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 <nav>
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">THE ITALIAN WAY</a>
-    <ul class="nav-links" style="list-style:none;"><li><a href="index.html" class="active">Home</a></li><li><a href="vetrina.html">Catalogo</a></li><li><a href="selezione.html">Selezione</a></li><li><a href="chi-siamo.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li><div class="lang-switch"><button class="active" onclick="location.href='index.html'">IT</button><button class="" onclick="location.href='index-en.html'">EN</button></div></ul>
+    <ul class="nav-links" style="list-style:none;"><li><a href="index.html" class="active">Home</a></li><li><a href="vetrina.html">Libri</a></li><li><a href="selezione.html">Selezione</a></li><li><a href="chi-siamo.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li><div class="lang-switch"><button class="active" onclick="location.href='index.html'">IT</button><button class="" onclick="location.href='index-en.html'">EN</button></div></ul>
   </div>
 </nav>
 
@@ -262,7 +262,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
   <div class="wrap">
     <div class="footer-row">
       <div class="footer-brand">THE ITALIAN WAY</div>
-      <ul class="footer-links" style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="vetrina.html">Catalogo</a></li><li><a href="selezione.html">Selezione</a></li><li><a href="chi-siamo.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li></ul>
+      <ul class="footer-links" style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="vetrina.html">Libri</a></li><li><a href="selezione.html">Selezione</a></li><li><a href="chi-siamo.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li></ul>
     </div>
     <div class="footer-bottom">
       <p>© 2026 The Italian Way — Tutti i diritti riservati</p>

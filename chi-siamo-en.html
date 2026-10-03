@@ -131,7 +131,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 
 @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 860px) {
-  .nav-links { display: none; }
+  .nav-inner { flex-wrap: wrap; gap: 6px 16px; padding: 12px 24px; } .nav-links { width: 100%; gap: 22px; overflow-x: auto; white-space: nowrap; padding-bottom: 6px; scrollbar-width: none; } .nav-links::-webkit-scrollbar { display: none; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
 }
 
@@ -141,7 +141,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 <nav>
   <div class="nav-inner">
     <a class="nav-brand" href="index-en.html">THE ITALIAN WAY</a>
-    <ul class="nav-links" style="list-style:none;"><li><a href="index-en.html">Home</a></li><li><a href="vetrina-en.html">Catalog</a></li><li><a href="chi-siamo-en.html" class="active">About</a></li><li><a href="contatti-en.html">Contact</a></li><div class="lang-switch"><button class="" onclick="location.href='chi-siamo.html'">IT</button><button class="active" onclick="location.href='chi-siamo-en.html'">EN</button></div></ul>
+    <ul class="nav-links" style="list-style:none;"><li><a href="index-en.html">Home</a></li><li><a href="vetrina-en.html">Books</a></li><li><a href="selezione.html">Selection (Italian)</a></li><li><a href="chi-siamo-en.html" class="active">About</a></li><li><a href="contatti-en.html">Contact</a></li><div class="lang-switch"><button class="" onclick="location.href='chi-siamo.html'">IT</button><button class="active" onclick="location.href='chi-siamo-en.html'">EN</button></div></ul>
   </div>
 </nav>
 <header class="page-header wrap"><h1>About me</h1></header>
@@ -152,7 +152,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
       <div class="about-text">
         <h2>Sal Giuliano, author and illustrator</h2>
         <p>I write and draw stories from Sicily, between the slopes of Mount Etna and the sea. Each book starts as an idea and slowly grows into a whole world — whether it's a children's adventure or a thriller set in the streets of Catania.</p>
-        <p>The Italian Way gathers all my creations, published on Amazon and other platforms, one at a time, with care.</p>
+        <p>The Italian Way is where I showcase a hand-picked selection of Italian brands, with links to their official stores on Amazon.it (that page is in Italian). You can find my books on my author site, <a href="https://salgiuliano.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px;">salgiuliano.com</a>.</p>
       </div>
     </div>
   </div>
@@ -161,7 +161,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
   <div class="wrap">
     <div class="footer-row">
       <div class="footer-brand">THE ITALIAN WAY</div>
-      <ul class="footer-links" style="list-style:none;"><li><a href="index-en.html">Home</a></li><li><a href="vetrina-en.html">Catalog</a></li><li><a href="chi-siamo-en.html">About</a></li><li><a href="contatti-en.html">Contact</a></li></ul>
+      <ul class="footer-links" style="list-style:none;"><li><a href="index-en.html">Home</a></li><li><a href="vetrina-en.html">Books</a></li><li><a href="selezione.html">Selection (Italian)</a></li><li><a href="chi-siamo-en.html">About</a></li><li><a href="contatti-en.html">Contact</a></li></ul>
     </div>
     <div class="footer-bottom">
       <p>© 2026 The Italian Way — All rights reserved</p>

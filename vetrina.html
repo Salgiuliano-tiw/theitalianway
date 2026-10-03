@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catalogo — The Italian Way</title>
+<title>Libri — The Italian Way</title>
 <meta name="description" content="Il catalogo di Sal Giuliano: storybook illustrati per bambini dai 3 ai 7 anni, libri da colorare e narrativa per adulti ambientata in Sicilia.">
 <link rel="canonical" href="https://theitalianway.it.com/vetrina.html">
 <link rel="alternate" hreflang="it" href="https://theitalianway.it.com/vetrina.html">
@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="x-default" href="https://theitalianway.it.com/vetrina.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Italian Way">
-<meta property="og:title" content="Catalogo — The Italian Way">
+<meta property="og:title" content="Libri — The Italian Way">
 <meta property="og:description" content="Il catalogo di Sal Giuliano: storybook illustrati per bambini dai 3 ai 7 anni, libri da colorare e narrativa per adulti ambientata in Sicilia.">
 <meta property="og:url" content="https://theitalianway.it.com/vetrina.html">
 <meta property="og:image" content="https://theitalianway.it.com/img/hero-etna.jpg">
@@ -131,7 +131,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 
 @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 860px) {
-  .nav-links { display: none; }
+  .nav-inner { flex-wrap: wrap; gap: 6px 16px; padding: 12px 24px; } .nav-links { width: 100%; gap: 22px; overflow-x: auto; white-space: nowrap; padding-bottom: 6px; scrollbar-width: none; } .nav-links::-webkit-scrollbar { display: none; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
 }
 
@@ -141,10 +141,10 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 <nav>
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">THE ITALIAN WAY</a>
-    <ul class="nav-links" style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="vetrina.html" class="active">Catalogo</a></li><li><a href="selezione.html">Selezione</a></li><li><a href="chi-siamo.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li><div class="lang-switch"><button class="active" onclick="location.href='vetrina.html'">IT</button><button class="" onclick="location.href='vetrina-en.html'">EN</button></div></ul>
+    <ul class="nav-links" style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="vetrina.html" class="active">Libri</a></li><li><a href="selezione.html">Selezione</a></li><li><a href="chi-siamo.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li><div class="lang-switch"><button class="active" onclick="location.href='vetrina.html'">IT</button><button class="" onclick="location.href='vetrina-en.html'">EN</button></div></ul>
   </div>
 </nav>
-<header class="page-header wrap"><h1>Catalogo</h1></header>
+<header class="page-header wrap"><h1>Libri</h1><p style="font-size:16px;line-height:1.7;color:var(--ink-soft);max-width:62ch;margin-top:14px;">Le storie di Sal Giuliano. Il sito di riferimento per i libri è <a href="https://salgiuliano.com" target="_blank" rel="noopener" style="font-weight:700;text-decoration:underline;text-underline-offset:3px;">salgiuliano.com</a>: qui trovi un'anteprima.</p></header>
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="filter-bar"><button class="filter-btn active" onclick="filterCatalog('all', this)">Tutto</button>
@@ -191,7 +191,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
   <div class="wrap">
     <div class="footer-row">
       <div class="footer-brand">THE ITALIAN WAY</div>
-      <ul class="footer-links" style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="vetrina.html">Catalogo</a></li><li><a href="selezione.html">Selezione</a></li><li><a href="chi-siamo.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li></ul>
+      <ul class="footer-links" style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="vetrina.html">Libri</a></li><li><a href="selezione.html">Selezione</a></li><li><a href="chi-siamo.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li></ul>
     </div>
     <div class="footer-bottom">
       <p>© 2026 The Italian Way — Tutti i diritti riservati</p>
