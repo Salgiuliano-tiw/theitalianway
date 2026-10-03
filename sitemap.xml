@@ -4,27 +4,30 @@
     <loc>https://theitalianway.it.com/</loc>
   </url>
   <url>
-    <loc>https://theitalianway.it.com/index-en.html</loc>
+    <loc>https://theitalianway.it.com/books.html</loc>
   </url>
   <url>
-    <loc>https://theitalianway.it.com/vetrina.html</loc>
+    <loc>https://theitalianway.it.com/selection.html</loc>
   </url>
   <url>
-    <loc>https://theitalianway.it.com/vetrina-en.html</loc>
+    <loc>https://theitalianway.it.com/about.html</loc>
   </url>
   <url>
-    <loc>https://theitalianway.it.com/selezione.html</loc>
+    <loc>https://theitalianway.it.com/contact.html</loc>
   </url>
   <url>
-    <loc>https://theitalianway.it.com/chi-siamo.html</loc>
+    <loc>https://theitalianway.it.com/it/</loc>
   </url>
   <url>
-    <loc>https://theitalianway.it.com/chi-siamo-en.html</loc>
+    <loc>https://theitalianway.it.com/it/libri.html</loc>
   </url>
   <url>
-    <loc>https://theitalianway.it.com/contatti.html</loc>
+    <loc>https://theitalianway.it.com/it/selezione.html</loc>
   </url>
   <url>
-    <loc>https://theitalianway.it.com/contatti-en.html</loc>
+    <loc>https://theitalianway.it.com/it/chi-siamo.html</loc>
+  </url>
+  <url>
+    <loc>https://theitalianway.it.com/it/contatti.html</loc>
   </url>
 </urlset>
