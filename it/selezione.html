@@ -89,6 +89,12 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+.cat-bar{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 20px}
+.cat-bar button{font:inherit;font-size:13px;font-weight:600;padding:8px 16px;border:1px solid var(--line,#ddd);background:var(--white,#fff);color:var(--ink,#14151A);border-radius:999px;cursor:pointer}
+.cat-bar button:hover{border-color:var(--ink,#14151A)}
+.cat-bar button[aria-pressed="true"]{background:var(--ink,#14151A);color:var(--white,#fff);border-color:var(--ink,#14151A)}
+</style>
 </head>
 <body>
 <nav>
@@ -106,9 +112,10 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 
 <section class="section">
   <div class="wrap">
+    <div class="cat-bar" id="cat-bar" role="group" aria-label="Categories"></div>
     <div class="brand-grid">
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear">
         <img class="brand-img" src="../img/sel-nero-giardini.jpg" alt="Scarpe in pelle marrone su un banco da lavoro (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Calzature</span>
         <h2 class="brand-name">Nero Giardini</h2>
@@ -117,7 +124,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.it/stores/NeroGiardini/page/E19BB864-04C8-4CF7-9DD2-370126213569?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vai al negozio su Amazon.it</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear">
         <img class="brand-img" src="../img/sel-paoul.jpg" alt="Scarpe da ballo su un parquet con luci calde (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Scarpe da ballo e cerimonia</span>
         <h2 class="brand-name">PAOUL</h2>
@@ -126,7 +133,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.it/stores/PAOUL/page/0567BABB-10ED-4AB4-939B-7CB25C14422B?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vai al negozio su Amazon.it</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="clothing gifts">
         <img class="brand-img" src="../img/sel-dalle-piane.jpg" alt="Maglioni in cashmere piegati su una mensola di legno (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Maglieria in cashmere</span>
         <h2 class="brand-name">Dalle Piane Cashmere</h2>
@@ -135,7 +142,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.it/stores/DALLEPIANECASHMERE/page/516DA45C-64C1-444A-AD76-246E452184C9?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vai al negozio su Amazon.it</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="clothing gifts">
         <img class="brand-img" src="../img/sel-duemme.jpg" alt="Sciarpa e maglia in cashmere verde chiaro (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Maglieria in cashmere</span>
         <h2 class="brand-name">Duemme Maglieria Cashmere</h2>
@@ -144,7 +151,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.it/stores/DuemmeMaglieriaCashmere/page/E74B0C2A-2267-45D8-ACAE-6811F1806AC4?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Vai al negozio su Amazon.it</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear objects">
         <img class="brand-img" src="../img/sel-cressi.jpg" alt="Scarpette da mare su una spiaggia di ciottoli (immagine illustrativa)" loading="lazy">
         <span class="brand-cat">Mare e sport acquatici</span>
         <h2 class="brand-name">Cressi</h2>
@@ -205,5 +212,20 @@ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.write
     </div>
   </div>
 </footer>
+<script>
+(function(){var L=[["all","Tutti"],["leather","Pelletteria"],["clothing","Abbigliamento"],["footwear","Calzature"],["home","Casa"],["food","Alimentari"],["objects","Oggettistica"],["jewellery","Gioielli"],["gifts","Regali"]];var items=[].slice.call(document.querySelectorAll('[data-cat]'));if(!items.length)return;
+var grids=[].slice.call(document.querySelectorAll('.grid,.brand-grid'));var bar=document.getElementById('cat-bar');
+var usHead=[].slice.call(document.querySelectorAll('.us-head'));
+function has(c,k){return k==='all'||(' '+c.getAttribute('data-cat')+' ').indexOf(' '+k+' ')>-1}
+L.forEach(function(x){var n=items.filter(function(e){return has(e,x[0])}).length;if(x[0]!=='all'&&!n)return;
+var b=document.createElement('button');b.type='button';b.textContent=x[1]+(x[0]==='all'?'':' ('+n+')');b.setAttribute('data-k',x[0]);b.setAttribute('aria-pressed',x[0]==='all'?'true':'false');
+b.onclick=function(){apply(x[0])};bar.appendChild(b)});
+function apply(k){[].forEach.call(bar.children,function(b){b.setAttribute('aria-pressed',b.getAttribute('data-k')===k?'true':'false')});
+items.forEach(function(e){e.style.display=has(e,k)?'':'none'});
+[].forEach.call(document.querySelectorAll('.tile-more,.brand-more'),function(e){e.style.display=k==='all'?'':'none'});
+grids.forEach(function(g){var v=[].some.call(g.children,function(e){return e.style.display!=='none'});g.style.display=v?'':'none'});
+var us=grids[grids.length-1];var show=us.style.display!=='none';usHead.forEach(function(e){e.style.display=show?'':'none'})}
+})();
+</script>
 </body>
 </html>

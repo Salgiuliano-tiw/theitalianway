@@ -89,6 +89,12 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+.cat-bar{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 20px}
+.cat-bar button{font:inherit;font-size:13px;font-weight:600;padding:8px 16px;border:1px solid var(--line,#ddd);background:var(--white,#fff);color:var(--ink,#14151A);border-radius:999px;cursor:pointer}
+.cat-bar button:hover{border-color:var(--ink,#14151A)}
+.cat-bar button[aria-pressed="true"]{background:var(--ink,#14151A);color:var(--white,#fff);border-color:var(--ink,#14151A)}
+</style>
 </head>
 <body>
 <nav>
@@ -106,9 +112,10 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 
 <section class="section">
   <div class="wrap">
+    <div class="cat-bar" id="cat-bar" role="group" aria-label="Categories"></div>
     <div class="brand-grid">
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear">
         <img class="brand-img" src="img/sel-nero-giardini.jpg" alt="Brown leather shoes on a workbench (illustrative image)" loading="lazy">
         <span class="brand-cat">Footwear</span>
         <h2 class="brand-name">Nero Giardini</h2>
@@ -117,7 +124,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.it/stores/NeroGiardini/page/E19BB864-04C8-4CF7-9DD2-370126213569?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Go to the store on Amazon.it</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear">
         <img class="brand-img" src="img/sel-paoul.jpg" alt="Dance shoes on a parquet floor with warm lights (illustrative image)" loading="lazy">
         <span class="brand-cat">Dance and ceremony shoes</span>
         <h2 class="brand-name">PAOUL</h2>
@@ -126,7 +133,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.it/stores/PAOUL/page/0567BABB-10ED-4AB4-939B-7CB25C14422B?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Go to the store on Amazon.it</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="clothing gifts">
         <img class="brand-img" src="img/sel-dalle-piane.jpg" alt="Folded cashmere sweaters on a wooden shelf (illustrative image)" loading="lazy">
         <span class="brand-cat">Cashmere knitwear</span>
         <h2 class="brand-name">Dalle Piane Cashmere</h2>
@@ -135,7 +142,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.it/stores/DALLEPIANECASHMERE/page/516DA45C-64C1-444A-AD76-246E452184C9?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Go to the store on Amazon.it</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="clothing gifts">
         <img class="brand-img" src="img/sel-duemme.jpg" alt="Light green cashmere scarf and sweater (illustrative image)" loading="lazy">
         <span class="brand-cat">Cashmere knitwear</span>
         <h2 class="brand-name">Duemme Maglieria Cashmere</h2>
@@ -144,7 +151,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.it/stores/DuemmeMaglieriaCashmere/page/E74B0C2A-2267-45D8-ACAE-6811F1806AC4?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener">Go to the store on Amazon.it</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear objects">
         <img class="brand-img" src="img/sel-cressi.jpg" alt="Water shoes on a pebble beach (illustrative image)" loading="lazy">
         <span class="brand-cat">Sea and water sports</span>
         <h2 class="brand-name">Cressi</h2>
@@ -161,11 +168,11 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
       </div>
 
     </div>
-    <h2 class="brand-name" style="margin:48px 0 8px;">Available on Amazon.com (US)</h2>
-    <p class="page-intro" style="margin-bottom:20px;">Italian-made products that ship to US addresses. Origin is stated by the manufacturer; the seller shown on the Amazon page may be an authorised reseller.</p>
+    <h2 class="brand-name us-head" style="margin:48px 0 8px;">Available on Amazon.com (US)</h2>
+    <p class="page-intro us-head" style="margin-bottom:20px;">Italian-made products that ship to US addresses. Origin is stated by the manufacturer; the seller shown on the Amazon page may be an authorised reseller.</p>
     <div class="brand-grid">
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="home objects gifts">
         <img class="brand-img" src="img/sel-alessi-9093.jpg" alt="Alessi kettle with a bird whistle on a wooden table (illustrative image)" loading="lazy">
         <span class="brand-cat">Design kitchenware</span>
         <h2 class="brand-name">Alessi 9093 Kettle</h2>
@@ -174,7 +181,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B001DSNM4E?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="home objects gifts">
         <img class="brand-img" src="img/sel-alessi-pulcina.jpg" alt="Stovetop espresso maker on a wooden table (illustrative image)" loading="lazy">
         <span class="brand-cat">Design kitchenware</span>
         <h2 class="brand-name">Alessi Pulcina Espresso Maker</h2>
@@ -183,7 +190,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B0156A0X00?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear">
         <img class="brand-img" src="img/sel-pantofola-vicenza.jpg" alt="Suede lace-up sneaker on a wooden surface (illustrative image)" loading="lazy">
         <span class="brand-cat">Sneakers</span>
         <h2 class="brand-name">Pantofola d'Oro Vicenza Low</h2>
@@ -192,7 +199,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B0CXJQB8T1?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear">
         <img class="brand-img" src="img/sel-pantofola-lioni.jpg" alt="Off-white lace-up sneaker on a wooden surface (illustrative image)" loading="lazy">
         <span class="brand-cat">Sneakers</span>
         <h2 class="brand-name">Pantofola d'Oro Lioni Low</h2>
@@ -201,7 +208,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B0CXJPH3MF?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear">
         <img class="brand-img" src="img/sel-pantofola-1886.jpg" alt="Brown low-top sneaker on a wooden surface (illustrative image)" loading="lazy">
         <span class="brand-cat">Sneakers</span>
         <h2 class="brand-name">Pantofola d'Oro 1886 Low</h2>
@@ -210,7 +217,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B0CJ3TFC8K?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="food gifts">
         <img class="brand-img" src="img/sel-gentile-pasta.jpg" alt="Bundle of long spaghetti with a tomato (illustrative image)" loading="lazy">
         <span class="brand-cat">Pasta</span>
         <h2 class="brand-name">Gentile Spaghetti di Gragnano IGP</h2>
@@ -219,7 +226,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B08KGVB2MF?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="food gifts">
         <img class="brand-img" src="img/sel-nolano-san-marzano.jpg" alt="Ripe red tomatoes with basil leaves (illustrative image)" loading="lazy">
         <span class="brand-cat">Tomatoes</span>
         <h2 class="brand-name">Nolano San Marzano DOP</h2>
@@ -228,7 +235,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B0DX877D76?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="jewellery gifts">
         <img class="brand-img" src="img/sel-miabella-byzantine.jpg" alt="Silver Byzantine chain bracelet on a linen cloth (illustrative image)" loading="lazy">
         <span class="brand-cat">Jewellery</span>
         <h2 class="brand-name">Miabella Byzantine Bracelet</h2>
@@ -237,7 +244,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B07T7JZZGW?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="jewellery gifts">
         <img class="brand-img" src="img/sel-miabella-bee.jpg" alt="Gold pendant necklace with an Italian bee coin (illustrative image)" loading="lazy">
         <span class="brand-cat">Jewellery</span>
         <h2 class="brand-name">Miabella 2-Lire Bee Coin Necklace</h2>
@@ -246,7 +253,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B07K8SVFSS?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="jewellery objects gifts">
         <img class="brand-img" src="img/sel-murano-bracelet.jpg" alt="Multicolour Murano glass bead bracelet on a wooden table (illustrative image)" loading="lazy">
         <span class="brand-cat">Jewellery</span>
         <h2 class="brand-name">Murano Glass Bracelet by Glass of Venice</h2>
@@ -255,7 +262,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B0782VMCRK?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="leather gifts">
         <img class="brand-img" src="img/sel-baroncelli-satchel.jpg" alt="Tan leather satchel handbag on a workshop bench (illustrative image)" loading="lazy">
         <span class="brand-cat">Leather handbags</span>
         <h2 class="brand-name">Baroncelli Medium Satchel Crossbody</h2>
@@ -264,7 +271,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B085BPL9BX?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="leather gifts">
         <img class="brand-img" src="img/sel-bruno-magli-marina.jpg" alt="Black leather crossbody clutch on a marble surface (illustrative image)" loading="lazy">
         <span class="brand-cat">Leather handbags</span>
         <h2 class="brand-name">Bruno Magli Marina Crossbody</h2>
@@ -273,7 +280,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         <a class="brand-cta" href="https://www.amazon.com/dp/B0GTBZ7T76?tag=theitalianway-20" target="_blank" rel="sponsored nofollow noopener">See it on Amazon.com</a>
       </div>
 
-      <div class="brand-card">
+      <div class="brand-card" data-cat="footwear leather gifts">
         <img class="brand-img" src="img/sel-bruno-magli-maioco.jpg" alt="Black leather cap-toe Oxford dress shoe on a marble surface (illustrative image)" loading="lazy" onerror="this.remove()">
         <span class="brand-cat">Men's leather shoes</span>
         <h2 class="brand-name">Bruno Magli Maioco Oxford</h2>
@@ -327,5 +334,20 @@ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.write
     </div>
   </div>
 </footer>
+<script>
+(function(){var L=[["all","All"],["leather","Leather goods"],["clothing","Clothing"],["footwear","Footwear"],["home","Home"],["food","Food"],["objects","Objects"],["jewellery","Jewellery"],["gifts","Gifts"]];var items=[].slice.call(document.querySelectorAll('[data-cat]'));if(!items.length)return;
+var grids=[].slice.call(document.querySelectorAll('.grid,.brand-grid'));var bar=document.getElementById('cat-bar');
+var usHead=[].slice.call(document.querySelectorAll('.us-head'));
+function has(c,k){return k==='all'||(' '+c.getAttribute('data-cat')+' ').indexOf(' '+k+' ')>-1}
+L.forEach(function(x){var n=items.filter(function(e){return has(e,x[0])}).length;if(x[0]!=='all'&&!n)return;
+var b=document.createElement('button');b.type='button';b.textContent=x[1]+(x[0]==='all'?'':' ('+n+')');b.setAttribute('data-k',x[0]);b.setAttribute('aria-pressed',x[0]==='all'?'true':'false');
+b.onclick=function(){apply(x[0])};bar.appendChild(b)});
+function apply(k){[].forEach.call(bar.children,function(b){b.setAttribute('aria-pressed',b.getAttribute('data-k')===k?'true':'false')});
+items.forEach(function(e){e.style.display=has(e,k)?'':'none'});
+[].forEach.call(document.querySelectorAll('.tile-more,.brand-more'),function(e){e.style.display=k==='all'?'':'none'});
+grids.forEach(function(g){var v=[].some.call(g.children,function(e){return e.style.display!=='none'});g.style.display=v?'':'none'});
+var us=grids[grids.length-1];var show=us.style.display!=='none';usHead.forEach(function(e){e.style.display=show?'':'none'})}
+})();
+</script>
 </body>
 </html>

@@ -136,6 +136,12 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+.cat-bar{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 20px}
+.cat-bar button{font:inherit;font-size:13px;font-weight:600;padding:8px 16px;border:1px solid var(--line,#ddd);background:var(--white,#fff);color:var(--ink,#14151A);border-radius:999px;cursor:pointer}
+.cat-bar button:hover{border-color:var(--ink,#14151A)}
+.cat-bar button[aria-pressed="true"]{background:var(--ink,#14151A);color:var(--white,#fff);border-color:var(--ink,#14151A)}
+</style>
 </head>
 <body>
 <nav>
@@ -165,9 +171,10 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
     <p class="section-sub">Calzature, maglieria in cashmere e articoli per il mare. Cliccando vai sul negozio ufficiale del marchio su Amazon.it.</p>
     <p class="disclosure">In qualità di Affiliato Amazon io ricevo un guadagno dagli acquisti idonei.</p>
 
+    <div class="cat-bar" id="cat-bar" role="group" aria-label="Categories"></div>
     <div class="grid">
 
-      <div class="tile">
+      <div class="tile" data-cat="footwear">
         <a class="tile-media-wrap ph-1" href="https://www.amazon.it/stores/NeroGiardini/page/E19BB864-04C8-4CF7-9DD2-370126213569?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="Nero Giardini su Amazon.it">
           <span class="ph-name">Nero Giardini</span>
           <img class="tile-img" src="../img/sel-nero-giardini.jpg" alt="" loading="lazy" onerror="this.remove()">
@@ -180,7 +187,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         </div>
       </div>
 
-      <div class="tile">
+      <div class="tile" data-cat="footwear">
         <a class="tile-media-wrap ph-2" href="https://www.amazon.it/stores/PAOUL/page/0567BABB-10ED-4AB4-939B-7CB25C14422B?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="PAOUL su Amazon.it">
           <span class="ph-name">PAOUL</span>
           <img class="tile-img" src="../img/sel-paoul.jpg" alt="" loading="lazy" onerror="this.remove()">
@@ -193,7 +200,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         </div>
       </div>
 
-      <div class="tile">
+      <div class="tile" data-cat="clothing gifts">
         <a class="tile-media-wrap ph-3" href="https://www.amazon.it/stores/DALLEPIANECASHMERE/page/516DA45C-64C1-444A-AD76-246E452184C9?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="Dalle Piane Cashmere su Amazon.it">
           <span class="ph-name">Dalle Piane Cashmere</span>
           <img class="tile-img" src="../img/sel-dalle-piane.jpg" alt="" loading="lazy" onerror="this.remove()">
@@ -206,7 +213,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         </div>
       </div>
 
-      <div class="tile">
+      <div class="tile" data-cat="clothing gifts">
         <a class="tile-media-wrap ph-4" href="https://www.amazon.it/stores/DuemmeMaglieriaCashmere/page/E74B0C2A-2267-45D8-ACAE-6811F1806AC4?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="Duemme Maglieria Cashmere su Amazon.it">
           <span class="ph-name">Duemme Maglieria Cashmere</span>
           <img class="tile-img" src="../img/sel-duemme.jpg" alt="" loading="lazy" onerror="this.remove()">
@@ -219,7 +226,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 24px; margin-top: 40
         </div>
       </div>
 
-      <div class="tile">
+      <div class="tile" data-cat="footwear objects">
         <a class="tile-media-wrap ph-5" href="https://www.amazon.it/dp/B0866RW4SB?tag=theitalianw0f-21" target="_blank" rel="sponsored nofollow noopener" aria-label="Cressi Borocay su Amazon.it">
           <span class="ph-name">Cressi</span>
           <img class="tile-img" src="../img/sel-cressi.jpg" alt="" loading="lazy" onerror="this.remove()">
@@ -304,5 +311,20 @@ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.write
   </div>
 </footer>
 
+<script>
+(function(){var L=[["all","Tutti"],["leather","Pelletteria"],["clothing","Abbigliamento"],["footwear","Calzature"],["home","Casa"],["food","Alimentari"],["objects","Oggettistica"],["jewellery","Gioielli"],["gifts","Regali"]];var items=[].slice.call(document.querySelectorAll('[data-cat]'));if(!items.length)return;
+var grids=[].slice.call(document.querySelectorAll('.grid,.brand-grid'));var bar=document.getElementById('cat-bar');
+var usHead=[].slice.call(document.querySelectorAll('.us-head'));
+function has(c,k){return k==='all'||(' '+c.getAttribute('data-cat')+' ').indexOf(' '+k+' ')>-1}
+L.forEach(function(x){var n=items.filter(function(e){return has(e,x[0])}).length;if(x[0]!=='all'&&!n)return;
+var b=document.createElement('button');b.type='button';b.textContent=x[1]+(x[0]==='all'?'':' ('+n+')');b.setAttribute('data-k',x[0]);b.setAttribute('aria-pressed',x[0]==='all'?'true':'false');
+b.onclick=function(){apply(x[0])};bar.appendChild(b)});
+function apply(k){[].forEach.call(bar.children,function(b){b.setAttribute('aria-pressed',b.getAttribute('data-k')===k?'true':'false')});
+items.forEach(function(e){e.style.display=has(e,k)?'':'none'});
+[].forEach.call(document.querySelectorAll('.tile-more,.brand-more'),function(e){e.style.display=k==='all'?'':'none'});
+grids.forEach(function(g){var v=[].some.call(g.children,function(e){return e.style.display!=='none'});g.style.display=v?'':'none'});
+var us=grids[grids.length-1];var show=us.style.display!=='none';usHead.forEach(function(e){e.style.display=show?'':'none'})}
+})();
+</script>
 </body>
 </html>
